@@ -23,6 +23,15 @@ en/mongodb.epub: en/title.png en/title.txt en/mongodb.markdown
 en/mongodb.mobi: en/mongodb.epub
 	$(MOBI_BUILDER) $^
 
+ja/mongodb.pdf:
+	cd ja && $(PDF_BUILDER) $(PDF_BUILDER_FLAGS) $(SOURCE_FILE_NAME) -o $(BOOK_FILE_NAME).pdf
+
+ja/mongodb.epub: ja/title.png ja/title.txt ja/mongodb.markdown
+	$(EPUB_BUILDER) $(EPUB_BUILDER_FLAGS) $^ -o $@
+
+ja/mongodb.mobi: ja/mongodb.epub
+	$(MOBI_BUILDER) $^
+
 clean:
 	rm -f */$(BOOK_FILE_NAME).pdf
 	rm -f */$(BOOK_FILE_NAME).epub

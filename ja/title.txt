@@ -1,0 +1,2 @@
+% MongoDBの手引き (The Little MongoDB Book)
+% Karl Seguin / 訳: Makopoppo
